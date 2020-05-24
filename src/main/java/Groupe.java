@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Groupe implements Department, Serializable{
+public class Groupe implements Department, Serializable, DAO<Department>{
 	
 	public String gpName;
 	//public LinkedList <Department> sousHierarchie= new LinkedList<Department>();
@@ -12,6 +12,30 @@ public class Groupe implements Department, Serializable{
 	public Groupe(String name) {
 		super();
 		this.gpName = name;
+	}
+	
+	public ArrayList<Department> getAll() {
+		return sousHierarchie;
+	}
+	
+
+	public Department getPersonel(int p) {
+		return sousHierarchie.get(p);
+	}
+
+
+	public void add(Department t) {
+		addTo(t);
+	}
+
+
+	public void delete(Department t) {
+		removeFrom (t);
+	}
+
+
+	public void update(Department t) {
+		sousHierarchie.set(sousHierarchie.indexOf(t), t);
 	}
 	
 	
@@ -64,5 +88,10 @@ public class Groupe implements Department, Serializable{
 		tb--;
 		System.out.println("} fin "+gpName+"\n");
 	}
+
+
+	
+
+
 
 }

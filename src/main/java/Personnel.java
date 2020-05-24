@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
-public class Personnel implements Department{
+public class Personnel implements Department, Serializable{
 	
 	
 	private String nom;
