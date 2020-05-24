@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class AffichageParGroupe implements Container{
+public class AffichageParGroupe implements Container, Serializable{
 	
 
 	ArrayList<Department> Arr = new ArrayList<Department>();

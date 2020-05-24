@@ -1,11 +1,11 @@
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.LinkedList;
 
-public class Groupe implements Department{
+public class Groupe implements Department, Serializable{
 	
 	public String gpName;
-	public LinkedList <Department> sousHierarchie= new LinkedList<Department>();
-	//public ArrayList<Department> sousHierarchie= new ArrayList<Department>();
+	//public LinkedList <Department> sousHierarchie= new LinkedList<Department>();
+	public ArrayList<Department> sousHierarchie= new ArrayList<Department>();
 	int tb=0;
 	
 
